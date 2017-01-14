@@ -13,12 +13,12 @@
           </view>
           <view class="widgets__list {{item.open ? 'widgets__list_show' : ''}}">
             <block wx:for-items="{{item.subName}}" wx:for-item="name">
-              <view class="widget" bindtap="callPhone" data-phone="{{item.phone[index]}}" hover-start-time="10" hover-stay-time="100">
-                <text class="widget__name">{{name}}</text>
+              <button class="widget" bindtap="callPhone" data-phone="{{item.phone[index]}}" hover-start-time="10" hover-stay-time="100" hover-class="other-button-hover">
+                <text class="widget__name" style="float:left;margin-left:10px;">{{name}}</text>
                 <text class="phoneText">{{item.phone[index]}}</text>
-                <image class="widget__arrow" src="../images/phone.png" mode="aspectFill" />
+                <image class="widget__arrow" src="../images/phone.png" mode="aspectFill" style="margin-top:15px;"/>
                 <view class="widget__line {{index == 0 ? 'widget__line_first' : ''}}"></view>
-              </view>
+              </button>
             </block>
           </view>
         </view>
